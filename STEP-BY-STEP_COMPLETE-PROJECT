@@ -417,6 +417,14 @@ resource "aws_autoscaling_group" "mygroup" {
 }
 
 
+Save the file (:wq!)
+
+run below commands:
+
+# terraform init
+# terraform apply
+
+give: yes
 ======================================
 Step 6: Go to AWS lab and connect to the instance
 
