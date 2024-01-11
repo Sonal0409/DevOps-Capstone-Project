@@ -550,7 +550,7 @@ jobs:
          port: ${{ secrets.PORT }}
          script: |
            git clone https://github.com/Sonal0409/DevOps-Capstone-Project.git
-           cd MavenBuild-SL
+           cd DevOps-Capstone-Project
            helm list -A
            helm install mavenbuild-dev ./webapp
            helm list -A
