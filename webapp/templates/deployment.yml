@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+
+
+
+  name: ais-ifm
+
+
+
+  labels:
+
+
+
+    app: ais
+
+
+
+spec:
+
+
+
+  replicas: 3
+
+
+
+  selector:
+
+
+
+    matchLabels:
+
+      app: ais
+
+      tier: web
+
+
+
+  template:
+
+
+
+    metadata:
+
+
+
+      labels:
+
+       app: ais
+
+       tier: web
+
+
+
+    spec:
+
+
+
+      containers:
+
+
+
+      - name: ais
+
+
+
+        image: edu123/docker-image
+
+
+
+        ports:
+
+
+
+        - containerPort: 8090
+
+
+
+        resources:
+
+
+
+          limits:
+
+
+
+            cpu: 1000m
+
+
+
+            memory: 600Mi
+
+
+
+          requests:
+
+
+
+            cpu: 500m
+
+
+
+            memory: 300Mi
