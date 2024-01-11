@@ -33,14 +33,18 @@ jobs:
       - name: Execute kubernetes comamnd to deploy code
         uses: appleboy/ssh-action@v0.1.10
         with:
-         host: ${{ secrets.HOST }}
+         host:  44.203.98.140
          username: ${{ secrets.USERNAME }}
          password: ${{ secrets.PASSWORD }}
          port: ${{ secrets.PORT }}
          script: |
            git clone https://github.com/Sonal0409/DevOps-Capstone-Project.git
            cd DevOps-Capstone-Project
-           kubectl create -f Deployment.yml
+           helm list -A
+           helm install mavenbuild-dev ./webapp
+           helm list -A
+           kubectl get all
+           
           
           
 
