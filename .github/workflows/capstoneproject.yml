@@ -40,10 +40,7 @@ jobs:
          script: |
            git clone https://github.com/Sonal0409/DevOps-Capstone-Project.git
            cd DevOps-Capstone-Project
-           helm list -A
-           helm install webapp-deploy-new ./webapp
-           helm list -A
-           kubectl get all
+           kubectl create -f Deployment.yml
           
           
 
