@@ -64,7 +64,7 @@ spec:
 
 
 
-        image: edu123/docker-image:latest
+        image: edu123/docker-image:42a5b0192c7be4bcc06703dbf1d4d6a8f5a3e6a8
 
 
 
